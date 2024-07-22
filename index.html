@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man: No Way Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo-colegio.png" alt="Logo del Colegio" class="school-logo">
+        <h1>Spider-Man: No Way Home</h1>
+        <p>Explora a los personajes y el mundo de la última película de Spider-Man.</p>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Bienvenid@ </h2>
+            <p>Bienvenido a esta pagina donde la identidad de Peter Parker es revelada al mundo, poniéndolo en conflicto con la sociedad y llevándolo a buscar la ayuda del Dr. Strange para hacer que todos olviden que él es Spider-Man. Sin embargo, el hechizo sale mal, y villanos de otros universos comienzan a aparecer, poniendo en riesgo todo lo que Peter ama.</p>
+        </section>
+        
+
+        <section class="trailer">
+            <h2>Tráiler Oficial</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/JfVOs4VSpmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="characters">
+            <h2>Personajes</h2>
+            <div class="character-list">
+                <div class="character">
+                    <img src="spiderman.jpg" alt="Spider-Man">
+                    <h3>Peter Parker / Spider-Man</h3>
+                    <p>Interpretado por Tom Holland, Peter Parker es un joven superhéroe que trata de balancear su vida como estudiante y su responsabilidad como Spider-Man.</p>
+                </div>
+                <div class="character">
+                    <img src="doctor-strange.jpg" alt="Doctor Strange">
+                    <h3>Dr. Stephen Strange</h3>
+                    <p>Interpretado por Benedict Cumberbatch, el Dr. Strange es un hechicero poderoso que ayuda a Peter a enfrentar las consecuencias de sus acciones.</p>
+                </div>
+                <div class="character">
+                    <img src="mj.jpg" alt="MJ">
+                    <h3>MJ</h3>
+                    <p>Interpretada por Zendaya, MJ es la novia de Peter Parker y una aliada clave en sus aventuras como Spider-Man.</p>
+                </div>
+                <div class="character">
+                    <img src="ned.jpg" alt="Ned Leeds">
+                    <h3>Ned Leeds</h3>
+                    <p>Interpretado por Jacob Batalon, Ned es el mejor amigo de Peter Parker y un apoyo incondicional en sus aventuras.</p>
+                </div>
+                <div class="character">
+                    <img src="green-goblin.jpg" alt="Green Goblin">
+                    <h3>Norman Osborn / Duende Verde</h3>
+                    <p>Interpretado por Willem Dafoe, Norman Osborn, también conocido como el Duente Verde, es uno de los villanos más emblemáticos que regresa para enfrentarse a Spider-Man.</p>
+                </div>
+                <div class="character">
+                    <img src="doc-ock.jpg" alt="Doctor Octopus">
+                    <h3>Dr. Otto Octavius / Doctor Octopus</h3>
+                    <p>Interpretado por Alfred Molina, el Dr. Otto Octavius, conocido como Doctor Octopus, es un científico brillante con tentáculos mecánicos que regresa del universo de Spider-Man 2.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="survey">
+            <h2>¡Queremos tu opinión!</h2>
+            <form action="#" onsubmit="return validateSurvey()">
+                <label for="favorite-character">¿Quién es tu personaje favorito?</label>
+                <select id="favorite-character" name="favorite-character" required>
+                    <option value="" disabled selected>Selecciona un personaje</option>
+                    <option value="spiderman">Spider-Man</option>
+                    <option value="doctor-strange">Doctor Strange</option>
+                    <option value="mj">MJ</option>
+                    <option value="ned">Ned</option>
+                    <option value="green-goblin">Duende Verde</option>
+                    <option value="doc-ock">Doctor Octopus</option>
+                </select>
+
+                <label for="movie-rating">¿Cómo calificarías la película?</label>
+                <select id="movie-rating" name="movie-rating" required>
+                    <option value="" disabled selected>Selecciona una calificación</option>
+                    <option value="1">1 - Muy mala</option>
+                    <option value="2">2 - Mala</option>
+                    <option value="3">3 - Regular</option>
+                    <option value="4">4 - Buena</option>
+                    <option value="5">5 - Excelente</option>
+                </select>
+
+        </section>
+
+        <section class="contact">
+            <h2>Contáctanos</h2>
+            <form action="#">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Página hecho por "Renato Angelo Quispe Yucra" de Spider-Man: No Way Home</p>
+    </footer>
+
+    <script>
+        function validateSurvey() {
+            const favoriteCharacter = document.getElementById('favorite-character').value;
+            const movieRating = document.getElementById('movie-rating').value;
+
+            if (!favoriteCharacter || !movieRating) {
+                alert('Por favor, selecciona una opción en todas las categorías antes de enviar.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
